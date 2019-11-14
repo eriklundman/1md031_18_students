@@ -15,10 +15,10 @@ Before you submit the final version of your labs, make sure that your project fu
 
 Create an index.html file which contains:
 - [X] A headline
-- [ ] A section to select burgers that contains at least three items. Each item has:
-	- [ ] A name
-	- [ ] An image
-	- [ ] Information about allergies 
+- [X] A section to select burgers that contains at least three items. Each item has:
+	- [X] A name
+	- [X] An image
+	- [X] Information about allergies 
 - [ ] A section to collect customer information:
 	- [ ] First- and Last Name (in one field)
 	- [ ] E-Mail Address
