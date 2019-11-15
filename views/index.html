@@ -9,6 +9,8 @@
 
         <main>
             <h1>Welcome to BurgerOnline</h1>
+
+
         </main>
 
         <section>
@@ -26,7 +28,7 @@
                 <tbody>     <!-- Bilderna på hamburgarna -->
                     <tr>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Big_Mac_hamburger.jpg"
-                        width="300" alt="Sunset in Uppsala" title="Mmmmmums"></td>
+                        width="300" alt="Var dyker detta upp?" title="Mmmmmums"></td>
                         <td><img src="https://live.staticflickr.com/7018/6414080413_e56c2499c5_b.jpg"
                         width="300" title="Bacon?"></td>
                         <td><img src="http://res.freestockphotos.biz/pictures/17/17277-a-hamburger-on-a-plate-pv.jpg"
@@ -36,34 +38,85 @@
 
                 <tfoot>     <!-- Ingredienserna på hamburgarna -->
                     <tr>
-                        <td><ul>
-                            <li>Our tallest burger on the menu</li>
-                            <li>Store bought bread (contains gluten)</li>
-                            <li>Best cheece in middle Sweden (contains lactose)</li>
-                            <li>Served best warm</li>
-                        </ul></td>
-                        <td><ul>
-                            <li>Local beef with crispy bacon</li>
-                            <li>Fresh gluten free bread</li>
-                            <li>Dripping creamy cheece (contains lactose)</li>
-                            <li>Best name on the menu</li>
-                        </ul></td>
-                        <td><ul>
-                            <li>Our most fotogenic burger</li>
-                            <li>Huge and tasty beef </li>
-                            <li>Salad</li>
-                            <li>Almost veggie (contains gluten)</li>
-                        </ul></td>
+                        <td>
+                            <ul>
+                                <li>Our tallest burger on the menu</li>
+                                <li>Store bought bread (contains gluten)</li>
+                                <li>Best cheece in Svealand (contains lactose)</li>
+                                <li>Served best warm</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Local beef with crispy bacon</li>
+                                <li>Fresh gluten free bread</li>
+                                <li>Dripping creamy cheece (contains lactose)</li>
+                                <li>Best name on the menu</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Our most fotogenic burger</li>
+                                <li>Huge and tasty beef </li>
+                                <li>Salad</li>
+                                <li>Almost veggie (contains gluten)</li>
+                            </ul>
+                        </td>
                     </tr>
                 </tfoot>
             </table>
         </section>
-
-        <section>
+                        <!-- Här skriver man in sin kontaktinformation -->
+        <section id="contact">   <!-- fråga om detta! -->
             <h1>Customer information</h1>
             <p>This is where you provide necessary information</p>
 
-        </section>
+            <form>      <!-- Input rutor -->
+                <fieldset>
+                    <legend><p>Delivery information:</p></legend>
+                    <p>
+                        <label for="fullname">Full name</label><br>
+                        <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+                    </p>
+                    <p>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required ="required" placeholder="E-mail address">
+                    </p>
+                    <p>
+                        <label for="street">Street</label><br>
+                        <input type="text" id="street" name="st" required="required" placeholder="Street name">
+                    </p>
+                    <p>
+                        <label for="house">House</label><br>
+                        <input type="text" id="house" name="ho" required="required" placeholder="House number">
+                    </p>
+                </fieldset>
+                        <!-- Drop down list -->
+                <p>
+                    <label for="paymethod">Payment method</label><br>
+                    <select id="paymethod" name="pay">
+                        <option>Credit card</option>
+                        <option>Mobile bankID</option>
+                        <option>Paypal</option>
+                        <option>Invoice</option>
+                        <option>Cash</option>
+                    </select>
+                </p>
+                        <!-- Radio buttons -->
+                <p>
+                    Select a gender<br>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other" checked> Other
+                </p>
+
+
+            </form>
+
+        </section>      <!-- Knappen -->
+
+        <button type="submit"><img src="https://live.staticflickr.com/2124/5716178516_d22b847b3e_b.jpg"
+        width="50"> Place your order</button>
 
         <footer>
             <a href="http://www.google.com/">Klicka här om du är sugen på något helt annat</a>
