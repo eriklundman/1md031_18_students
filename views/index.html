@@ -4,45 +4,128 @@
         <title>Burger store</title>
         <meta charset="utf-8"/>
 
-        <link rel="stylesheet" type="text/css" href="css/style.css"
+        <script src="https://vuejs.org/js/vue.js"></script>
+        <script src="js/vue_script.js"></script>
+        <script src="js/js_script.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
-        <header><h1>Welcome to BurgerOnline</h1></header>
+        <header id="headdesign">
+            <img id="topimage" src="img/topimage2.jpg">
+            <h1 id="headline">Welcome to BurgerOnline</h1>
+
+        </header>
 
         <main>
 
 
-        <section>
+        <section id="burgermenu">
             <h1>Select your burger</h1>
             <p>This is where you make your burger selection</p>
-            <table>
-                <thead>     <!--Namnen på hamburgarna -->
+
+            <div class="table">
+                <div class="menu a">
+                    <h2>Tower burger</h2>
+                </div>
+
+                <div class="menu b">
+                    <h2>Kevin Bacon</h2>
+                </div>
+
+                <div class="menu c">
+                    <h2>Hollywood burger</h2>
+                </div>
+
+                <div class="menu d">
+                    <img src="img/hamburger1.jpg" width="300" alt="Var dyker detta upp?" title="Mmmmmums">
+                </div>
+
+                <div class="menu e">
+                    <img src="img/hamburger2.jpg" width="330" title="Bacon?">
+                </div>
+
+                <div class="menu f">
+                    <img src="img/hamburger3.jpg" width="360" title="Dry but good lighting">
+                </div>
+
+                <div class="menu g">
+                    <ul>
+                        <li>Our tallest burger on the menu</li>
+                        <li>Store bought bread
+                            <span class="intolerance">(contains gluten)</span>
+                        </li>
+                        <li>Best cheece in Svealand
+                            <span class="intolerance">(contains lactose)</span>
+                        </li>
+                        <li>Served best warm</li>
+                    </ul>
+                </div>
+
+                <div class="menu h">
+                    <ul>
+                        <li>Local beef with crispy bacon</li>
+                        <li>Fresh gluten free bread</li>
+                        <li>Dripping creamy cheece
+                            <span class="intolerance">(contains lactose)</span>
+                        </li>
+                        <li>Best name on the menu</li>
+                    </ul>
+                </div>
+
+                <div class="menu i">
+                    <ul>
+                        <li>Our most fotogenic burger</li>
+                        <li>Huge and tasty beef </li>
+                        <li>Salad</li>
+                        <li>Almost veggie
+                            <span class="intolerance">(contains gluten)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+           <!-- <table>
+                <thead>     &lt;!&ndash;Namnen på hamburgarna &ndash;&gt;
                     <tr>
-                        <th><h2>Tower burger</h2></th>
-                        <th><h2>Kevin Bacon</h2></th>
-                        <th><h2>Hollywood burger</h2></th>
+                        <th>
+                            <h2>Tower burger</h2>
+                        </th>
+                        <th>
+                            <h2>Kevin Bacon</h2>
+                        </th>
+                        <th>
+                            <h2>Hollywood burger</h2>
+                        </th>
                     </tr>
                 </thead>
 
-                <tbody>     <!-- Bilderna på hamburgarna -->
+                <tbody align="center">     &lt;!&ndash; Bilderna på hamburgarna &ndash;&gt;
                     <tr>
-                        <td><img src="img/hamburger1.jpg"
-                        width="300" alt="Var dyker detta upp?" title="Mmmmmums"></td>
-                        <td><img src="img/hamburger2.jpg"
-                        width="300" title="Bacon?"></td>
-                        <td><img src="img/hamburger3.jpg"
-                        width="340" title="Dry but good lighting"></td>
+                        <td >
+                            <img src="img/hamburger1.jpg" width="300" alt="Var dyker detta upp?" title="Mmmmmums">
+                        </td>
+                        <td>
+                            <img src="img/hamburger2.jpg" width="330" title="Bacon?">
+                        </td>
+                        <td>
+                            <img src="img/hamburger3.jpg" width="340" title="Dry but good lighting">
+                        </td>
                     </tr>
                 </tbody>
 
-                <tfoot>     <!-- Ingredienserna på hamburgarna -->
+                <tfoot>     &lt;!&ndash; Ingredienserna på hamburgarna &ndash;&gt;
                     <tr>
                         <td>
                             <ul>
                                 <li>Our tallest burger on the menu</li>
-                                <li>Store bought bread (contains gluten)</li>
-                                <li>Best cheece in Svealand (contains lactose)</li>
+                                <li>Store bought bread
+                                    <span class="intolerance">(contains gluten)</span>
+                                </li>
+                                <li>Best cheece in Svealand
+                                    <span class="intolerance">(contains lactose)</span>
+                                </li>
                                 <li>Served best warm</li>
                             </ul>
                         </td>
@@ -50,7 +133,9 @@
                             <ul>
                                 <li>Local beef with crispy bacon</li>
                                 <li>Fresh gluten free bread</li>
-                                <li>Dripping creamy cheece (contains lactose)</li>
+                                <li>Dripping creamy cheece
+                                    <span class="intolerance">(contains lactose)</span>
+                                </li>
                                 <li>Best name on the menu</li>
                             </ul>
                         </td>
@@ -59,12 +144,14 @@
                                 <li>Our most fotogenic burger</li>
                                 <li>Huge and tasty beef </li>
                                 <li>Salad</li>
-                                <li>Almost veggie (contains gluten)</li>
+                                <li>Almost veggie
+                                    <span class="intolerance">(contains gluten)</span>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                 </tfoot>
-            </table>
+            </table>-->
         </section>
                         <!-- Här skriver man in sin kontaktinformation -->
         <section id="contact">   <!-- fråga om detta! -->
@@ -112,9 +199,19 @@
                         <!-- Radio buttons -->
                 <p>
                     Select a gender<br>
-                    <input type="radio" name="gender" value="male"> Male<br>
-                    <input type="radio" name="gender" value="female"> Female<br>
-                    <input type="radio" name="gender" value="other" checked> Other
+
+                    <input id="male" type="radio" name="gender" value="male">
+                    <label for="male">
+                        Male
+                    </label><br>
+                    <input id="female" type="radio" name="gender" value="female">
+                    <label for="female">
+                        Female
+                    </label><br>
+                    <input id="other" type="radio" name="gender" value="other" checked>
+                    <label for="other" type="radio">
+                        Other
+                    </label>
                 </p>
 
 
@@ -124,6 +221,7 @@
 
         <button type="submit"><img src="https://live.staticflickr.com/2124/5716178516_d22b847b3e_b.jpg"
         width="50"> Place your order</button>
+
         </main>
         <footer>
             <a href="http://www.google.com/">Klicka här om du är sugen på något helt annat</a>

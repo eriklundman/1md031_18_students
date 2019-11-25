@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway|Tomorrow|Ubuntu&display=swap');
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.3vh;
+}
+/* Classes*/
+
+.intolerance {
+    font-weight: bold;
+    color: cornflowerblue;
+}
+.table {
+    display: grid;
+    grid-template-columns: 19em 19em 19em;
+    grid-template-rows: 4em 13em 9em;
+}
+.menu {
+    text-align: center;
+}
+
+.a {
+    grid-column: 1;
+    grid-row: 1;
+
+}
+.b {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.c {
+    grid-column: 3;
+    grid-row: 1;
+}
+.d {
+    grid-column: 1;
+    grid-row: 2;
+}
+.e {
+    grid-column: 2;
+    grid-row: 2;
+}
+.f {
+    grid-column: 3;
+    grid-row: 2;
+}
+.g {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: left;
+}
+.h {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+}
+.i {
+    grid-column: 3;
+    grid-row: 3;
+    text-align: left;
+}
+
+/* ID:s*/
+#headdesign {
+    margin:1% 6%;
+    height: 17em;
+    overflow: hidden;
+}
+
+#topimage {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+#headline {
+    position: absolute;
+    top: 16vh;
+    left: 35vw;
+    margin-top: 1%;
+}
+
+#burgermenu {
+    background: black;
+    color: white;
+    border: white dashed 4px;
+}
+#contact {
+    border: black dashed 4px;
+}
+
+button:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+button {
+    margin: 1% 1% 2% 6%;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="radio"] + label {
+    cursor: pointer;
+}
+
+/*table {
+    width: 55%;
+    margin: 2%;
+}*/
+
+
+section {
+    margin:1% 6%;
+    border-radius: 2vh;
+    padding: 1% 2%;
+}
+
