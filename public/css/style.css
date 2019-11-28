@@ -11,8 +11,8 @@ body {
 }
 .table {
     display: grid;
-    grid-template-columns: 19em 19em 19em;
-    grid-template-rows: 4em 13em 9em;
+    grid-template-columns: 20em 20em 22em;
+    grid-template-rows: 4em 16em 9em;
 }
 .menu {
     text-align: center;
@@ -63,6 +63,7 @@ body {
 /* ID:s*/
 #headdesign {
     margin:1% 6%;
+    margin-left: ;
     height: 17em;
     overflow: hidden;
 }
