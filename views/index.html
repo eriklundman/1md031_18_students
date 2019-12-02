@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <head>
         <title>Burger store</title>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/deli-very.css">
 
-        <script src="https://vuejs.org/js/vue.js" defer></script>
-        <script src="js/vue_script.js" defer></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script src="https://vuejs.org/js/vue.js"defer></script>
         <script src="js/js_script.js" defer></script>
+        <script src="/vue/vue.js" defer></script>
+        <script src="/socket.io/socket.io.js" defer></script>
+        <script src="js/vue_script.js" defer></script>
 
+        <link rel="stylesheet" href="css/deli-very.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
@@ -18,14 +25,37 @@
 
         </header>
 
-        <main>
+        <main id="main">
 
 
         <section id="burgermenu">
             <h1>Select your burger</h1>
             <p>This is where you make your burger selection</p>
 
-            <div class="table">
+            <div id="table">
+                <div v-for="burger in order">
+                    <div class="burgernames">
+                        <h2>{{burger.name}}</h2>
+                    </div>
+                    <div class="burgernames" >
+                        <img v-bind:src="burger.image" height="250">
+                    </div>
+
+                    <div class="ingredients">
+                        <ul>
+                            <li>{{burger.kCal}} kCal</li>
+                            <li>{{burger.price}} kr</li>
+                            <li v-for="ingredient in burger.ingredients">{{ingredient}}</li>
+                            <li v-if="burger.gluten">Contains <span class="intolerance"> gluten</span></li>
+                            <li v-if="burger.lactose">Contains <span class="intolerance"> lactose</span></li>
+                        </ul>
+                        <input type="checkbox" v-bind:value="burger.name"> Add {{burger.name}}
+                    </div>
+
+
+                </div>
+            </div>
+            <!--<div class="table">
                 <div class="menu a">
                     <h2>Tower burger</h2>
                 </div>
@@ -85,7 +115,7 @@
                     </ul>
                 </div>
 
-            </div>
+            </div>-->
            <!-- <table>
                 <thead>     &lt;!&ndash;Namnen på hamburgarna &ndash;&gt;
                     <tr>
@@ -189,7 +219,7 @@
                 <p>
                     <label for="paymethod">Payment method</label><br>
                     <select id="paymethod" name="pay">
-                        <option>Credit card</option>
+                        <option>Credit card </option>
                         <option>Mobile bankID</option>
                         <option>Paypal</option>
                         <option>Invoice</option>
@@ -216,11 +246,26 @@
 
 
             </form>
+            <h1> Click in the map! </h1>
+            <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+            <div class="view-box">
+                <div id="dots" v-on:click="displayOrder">
+                    <div v-bind:style="{ left: details.x + 'px', top: details.y + 'px'}">
+                        T
+                    </div>
+                </div>
+            </div>
 
         </section>      <!-- Knappen -->
 
-        <button type="submit"><img src="https://live.staticflickr.com/2124/5716178516_d22b847b3e_b.jpg"
+
+        <button v-on:click="addOrder()" type="submit"><img src="https://live.staticflickr.com/2124/5716178516_d22b847b3e_b.jpg"
         width="50"> Place your order</button>
+
+        <p id="displayInfo"> <!-- v-bind="overview"-->
+            <!--{{overview}}-->
+        </p>
+
 
         </main>
         <footer>

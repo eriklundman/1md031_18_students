@@ -9,12 +9,15 @@ body {
     font-weight: bold;
     color: cornflowerblue;
 }
-.table {
+#table {
     display: grid;
-    grid-template-columns: 20em 20em 22em;
-    grid-template-rows: 4em 16em 9em;
+    grid-template-columns: repeat(auto-fill, 18em);
+    grid-template-rows: repeat(auto-fill, auto);
+
+
+
 }
-.menu {
+.burgernames {
     text-align: center;
 }
 
@@ -63,7 +66,6 @@ body {
 /* ID:s*/
 #headdesign {
     margin:1% 6%;
-    margin-left: ;
     height: 17em;
     overflow: hidden;
 }
