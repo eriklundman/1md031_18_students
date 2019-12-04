@@ -8,16 +8,21 @@ function getInfo() {
     let table = document.getElementById("table");
     let burgers = table.getElementsByTagName("INPUT");
 
-
-
     let info = [];
-    let burgerOrder = [];
     info.push(name, email, payment, gender);
 
-    for (var i = 0; i < burgers.length; i++) {
+    let burgerOrder = getBurgerOrder(burgers);
+
+    return [info, burgerOrder];
+}
+
+
+function getBurgerOrder(burgers) {
+    let burgerOrder = [];
+    for (let i = 0; i < burgers.length; i++) {
         if (burgers[i].checked) {
             burgerOrder.push(burgers[i].value);
         }
     }
-    return [info, burgerOrder];
+    return burgerOrder;
 }

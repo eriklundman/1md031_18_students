@@ -37,7 +37,7 @@
                     <div class="burgernames">
                         <h2>{{burger.name}}</h2>
                     </div>
-                    <div class="burgernames" >
+                    <div class="burgerimg" >
                         <img v-bind:src="burger.image" height="250">
                     </div>
 
@@ -184,7 +184,7 @@
             </table>-->
         </section>
                         <!-- Här skriver man in sin kontaktinformation -->
-        <section id="contact">   <!-- fråga om detta! -->
+        <section id="contact">
             <h1>Customer information</h1>
             <p>This is where you provide necessary information</p>
 
@@ -262,9 +262,20 @@
         <button v-on:click="addOrder()" type="submit"><img src="https://live.staticflickr.com/2124/5716178516_d22b847b3e_b.jpg"
         width="50"> Place your order</button>
 
-        <p id="displayInfo"> <!-- v-bind="overview"-->
-            <!--{{overview}}-->
-        </p>
+         <div id="overview">
+            <h3>Information</h3>
+            <ul>
+                <li v-for="information in overview" v-if="information != ''">
+                {{information}}
+                </li>
+            </ul>
+            <h3>Order</h3>
+            <ul>
+                <li v-for="burger in burgerOrder">
+                    {{burger}}
+                </li>
+            </ul>
+         </div>
 
 
         </main>

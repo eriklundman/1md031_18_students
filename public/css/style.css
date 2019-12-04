@@ -11,16 +11,20 @@ body {
 }
 #table {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 18em);
+    grid-template-columns: repeat(auto-fill, 19em);
     grid-template-rows: repeat(auto-fill, auto);
-
-
 
 }
 .burgernames {
     text-align: center;
-}
 
+}
+.burgerimg {
+    overflow: hidden;
+    width: 18em;
+    text-align: center;
+}
+/*
 .a {
     grid-column: 1;
     grid-row: 1;
@@ -61,7 +65,7 @@ body {
     grid-column: 3;
     grid-row: 3;
     text-align: left;
-}
+}*/
 
 /* ID:s*/
 #headdesign {
@@ -91,7 +95,9 @@ body {
 #contact {
     border: black dashed 4px;
 }
-
+#overview {
+    margin:1% 6%;
+}
 button:hover {
     background: lightgray;
     cursor: pointer;
@@ -106,11 +112,6 @@ input[type="radio"] {
 input[type="radio"] + label {
     cursor: pointer;
 }
-
-/*table {
-    width: 55%;
-    margin: 2%;
-}*/
 
 
 section {

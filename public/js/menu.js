@@ -25,5 +25,23 @@ var food = [
         "image": "img/hamburger3.jpg",
         "price": 100,
         "ingredients": ["Fake meat", "Lettuce"]
+    },
+    {
+        "name": "Baby Burgers",
+        "kCal": 10,
+        "lactose": true,
+        "gluten": true,
+        "image": "img/hamburger4.jpg",
+        "price": 10,
+        "ingredients": ["Small burger", "Onion"]
+    },
+    {
+        "name": "Burger Cake",
+        "kCal": 500,
+        "lactose": false,
+        "gluten": false,
+        "image": "img/hamburger5.jpg",
+        "price": 50,
+        "ingredients": ["Sugar", "Egg"]
     }
 ]
